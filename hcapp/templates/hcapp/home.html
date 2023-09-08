@@ -1,0 +1,51 @@
+{% extends "hcapp/base.html"%}
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8 margin2rem">
+        <h3>
+        Hello My name is Rinat I edit short videos and make slideshows
+        In English or Hebrew. I use Adobe Premiere and adobe creative cloud
+        for my projects. For the first year and for practice,
+        I will edit your videos for free! Could be any event such as birthday,
+        vacation, or bar mitzva. Please
+        <a href="mailto:rin.for.edit@gmail.com" >
+          send me an email with the details by clicking this link</a>,
+        and I will send you a link to upload your material.
+      </h3>
+
+      <div class="margin2rem">
+        {% load static %}
+        <video  width="600"  name='promo' poster={% static 'hcapp/pics/promo_thumb.jpg' %} controls>
+            <source src="{% static  'hcapp/promo.mp4' %}" type="video/mp4"> </source>
+        </video>
+        <!-- <img src="{% static 'hcapp/myimg.jpg' %}" alt="My image"> -->
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="content-section margin2rem">
+        <h3>Creations Examples</h3>
+        <p class='text-muted'>Examples displayed are with the permission of the client only</p>
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-light">Dont Text and Drive
+              <video  width="200"  name='ex1' poster={% static 'hcapp/pics/text_thumb.jpg' %} controls>
+                  <source src="{% static  'hcapp/clips/donttext.mp4' %}" type="video/mp4"> </source>
+              </video>
+            </li>
+            <li class="list-group-item list-group-item-light">Bollywood
+              <video  width="200"  name='ex2' poster={% static 'hcapp/pics/bollywood_thumb.jpg' %}  controls>
+                  <source src="{% static  'hcapp/clips/dilto.mp4' %}" type="video/mp4"> </source>
+              </video>
+            </li>
+            <li class="list-group-item list-group-item-light">Alaska Trip
+              <video  width="200"  name='ex3' poster={% static 'hcapp/pics/alaska_thumb.jpg' %} controls>
+                  <source src="{% static  'hcapp/clips/AK2015.mp4' %}" type="video/mp4"> </source>
+              </video>
+            </li>
+          </ul>
+        </p>
+      </div>
+    </div>
+</div>
+
+{% endblock content %}

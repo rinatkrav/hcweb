@@ -1,0 +1,96 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{% static 'hcapp/main.css'%}">
+    {% if title %}
+      <title>HC - {{ title }}</title>
+    {% else %}
+      <title>HC</title>
+    {% endif %}
+  </head>
+
+  <body>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-logocolor fixed-top" >
+        <div class="container" >
+          <h1> Happy Creations </h1>
+            <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto">
+            </div>
+            <!-- Navbar Right Side -->
+            <div class="navbar-nav">
+              <a class="nav-item nav-link" href="#">Email me with a request</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="navbar navbar-expand-md navbar-dark bg-peach">
+        <div class="container" >
+          <h2>Video creations, slide shows, posters, presentations</h2>
+        </div>
+      </nav>
+    </header>
+
+    <main role="main" class="container">
+
+
+    <div class="row">
+        <div class="col-md-8 margin2rem">
+          <h3>DRAFT</h3>
+            <h3>
+            Hello My name is Rinat I edit short videos and make slideshows
+            In English or Hebrew. I use Adobe Premiere and adobe creative cloud
+            for my projects. For the first year and for practice,
+            I will edit your videos for free! Could be any event such as birthday,
+            vacation, or bar mitzva. Please
+            <a href="mailto:rin.for.edit@gmail.com" >
+              send me an email with the details by clicking this link</a>,
+            and I will send you a link to upload your material.
+          </h3>
+
+          <div class="margin2rem">
+            {% load static %}
+            <video  width="600"  name='promo' poster={% static 'hcapp/pics/promo_thumb.jpg' %} controls>
+                <source src="{% static  'hcapp/promo.mp4' %}" type="video/mp4"> </source>
+            </video>
+            <!-- <img src="{% static 'hcapp/myimg.jpg' %}" alt="My image"> -->
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="content-section margin2rem">
+            <h3>Creations Examples</h3>
+            <p class='text-muted'>Examples displayed are with the permission of the client only</p>
+              <ul class="list-group">
+                <li class="list-group-item list-group-item-light">Dont Text and Drive
+                  <video  width="200"  name='ex1' poster={% static 'hcapp/pics/text_thumb.jpg' %} controls>
+                      <source src="{% static  'hcapp/clips/donttext.mp4' %}" type="video/mp4"> </source>
+                  </video>
+                </li>
+                <li class="list-group-item list-group-item-light">Bollywood
+                  <video  width="200"  name='ex2' poster={% static 'hcapp/pics/bollywood_thumb.jpg' %}  controls>
+                      <source src="{% static  'hcapp/clips/dilto.mp4' %}" type="video/mp4"> </source>
+                  </video>
+                </li>
+                <li class="list-group-item list-group-item-light">Alaska Trip
+                  <video  width="200"  name='ex3' poster={% static 'hcapp/pics/alaska_thumb.jpg' %} controls>
+                      <source src="{% static  'hcapp/clips/AK2015.mp4' %}" type="video/mp4"> </source>
+                  </video>
+                </li>
+              </ul>
+            </p>
+          </div>
+        </div>
+    </div>
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
